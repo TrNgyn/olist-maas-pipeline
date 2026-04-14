@@ -1,0 +1,7 @@
+# Ignore the dataset directory, which may contain large files or sensitive data
+dataset/
+terraform/terraform.exe
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
