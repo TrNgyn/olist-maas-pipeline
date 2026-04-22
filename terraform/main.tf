@@ -22,9 +22,9 @@ resource "aws_s3_bucket_public_access_block" "landing_security" {
 }
 
 # Ingestion Folders: Partitioning data by business domain
-resource "aws_s3_object" "ecommerce_folder" {
+resource "aws_s3_object" "sales_folder" {
   bucket = aws_s3_bucket.olist_landing.id
-  key    = "raw/ecommerce/"
+  key    = "raw/sales/"
 }
 
 resource "aws_s3_object" "marketing_folder" {
@@ -32,9 +32,9 @@ resource "aws_s3_object" "marketing_folder" {
   key    = "raw/marketing/"
 }
 
-resource "aws_s3_object" "ab_testing_folder" {
+resource "aws_s3_object" "testing_folder" {
   bucket = aws_s3_bucket.olist_landing.id
-  key    = "raw/ab_testing/"
+  key    = "raw/testing/"
 }
 
 # The bucket name needed for data syncing
