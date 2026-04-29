@@ -1,4 +1,9 @@
 # Ignore the dataset directory, which may contain large files or sensitive data
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
 dataset/
 terraform/terraform.exe
 .terraform/
