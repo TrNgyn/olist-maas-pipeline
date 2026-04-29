@@ -12,6 +12,7 @@ import boto3
 import requests
 import awswrangler as wr
 import pandas as pd
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,6 +20,7 @@ load_dotenv()
 S3_BUCKET      = os.environ["S3_BUCKET"]
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 CHAT_ID        = os.environ["CHAT_ID"]
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 AWS_REGION     = os.environ.get("AWS_REGION", "us-east-1")
 
 KPI = {
@@ -29,11 +31,14 @@ KPI = {
     "daily_revenue_target_brl":  float(os.environ.get("KPI_DAILY_REVENUE_BRL", 0)),
 }
 
-BEDROCK_MODEL = "anthropic.claude-3-sonnet-20240229-v1:0"
-TELEGRAM_URL  = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-GOLD_BASE     = f"s3://{S3_BUCKET}/serving/gold"
+GEMINI_MODEL = "gemini-2.0-flash"
+TELEGRAM_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+GOLD_BASE    = f"s3://{S3_BUCKET}/serving/gold"
 
 _boto_session = boto3.Session()
+
+genai.configure(api_key=GEMINI_API_KEY)
+_gemini = genai.GenerativeModel(model_name=GEMINI_MODEL)
 
 
 # ---------------------------------------------------------------------------
@@ -162,15 +167,12 @@ Rules:
 - Total length under 450 words"""
 
 
-def _call_bedrock(prompt: str) -> str:
-    client = boto3.client("bedrock-runtime", region_name=AWS_REGION)
-    body = json.dumps({
-        "anthropic_version": "bedrock-2023-05-31",
-        "max_tokens": 1100,
-        "messages": [{"role": "user", "content": prompt}],
-    })
-    response = client.invoke_model(modelId=BEDROCK_MODEL, body=body)
-    return json.loads(response["body"].read())["content"][0]["text"]
+def _call_gemini(prompt: str) -> str:
+    response = _gemini.generate_content(
+        prompt,
+        generation_config=genai.GenerationConfig(max_output_tokens=1100),
+    )
+    return response.text
 
 
 # ---------------------------------------------------------------------------
@@ -205,7 +207,7 @@ def lambda_handler(event, context):
 
     print(f"[DailyBrief] Metrics: {list(metrics.keys())} | KPI checks: {len(deltas)}")
 
-    html = _call_bedrock(_build_prompt(metrics, deltas))
+    html = _call_gemini(_build_prompt(metrics, deltas))
     _send_telegram(html)
 
     print("[DailyBrief] Brief delivered.")
