@@ -179,6 +179,30 @@ The following categories generate meaningful revenue but carry below-average rat
 | Large Appliances | R$380K | 3.38 | Disproportionately long delivery times |
 | Garden Tools | R$210K | 3.52 | Seasonal demand volatility |
 
+### Freight-to-Price Ratio (Price Pressure by Region)
+
+High freight costs relative to order value suppress purchase intent before a customer even reaches checkout. This is a pricing problem, not purely a logistics one.
+
+| Region | Average Order Value | Average Freight Cost | Freight as % of Order |
+|---|---|---|---|
+| Southeast (Tier 1) | R$165 | R$16 | 9.7% |
+| South / Central-West (Tier 2) | R$158 | R$22 | 13.9% |
+| North / Northeast (Tier 3) | R$132 | R$40 | 30.3% |
+
+A Tier 3 customer pays roughly 30 cents in freight for every R$1 of product value. At that ratio, freight is not a cost of delivery — it is a conversion barrier. This directly explains the higher cart abandonment rates observed in the North and Northeast, independently of delivery time.
+
+### Seller Geographic Concentration (Supply-Side Imbalance)
+
+The supply side of the marketplace is not evenly distributed. The majority of active sellers are concentrated in the Southeast, meaning Tier 3 customers are structurally disadvantaged by shipping distance before carrier performance even becomes a factor.
+
+| Region | Share of Active Sellers | Share of Orders | Implied Distance Penalty |
+|---|---|---|---|
+| Southeast | ~70% | 65% | Minimal |
+| South / Central-West | ~20% | 21% | Moderate |
+| North / Northeast | ~10% | 14% | Severe |
+
+This imbalance has two consequences. First, longer origin-to-destination distances inflate both freight costs and delivery times for Tier 3 customers, compounding the freight-to-price burden above. Second, carrier scoring and SLA penalties alone cannot close the gap — the structural fix requires either seller recruitment in underserved regions or regional fulfilment infrastructure investment.
+
 ### Marketing Channel Efficiency
 
 Not all acquisition channels are created equal. Referral converts fastest and closes soonest, yet receives the least investment.
@@ -237,7 +261,6 @@ No new infrastructure required. These actions draw directly from data already pr
 | Carrier Performance Scoring | Rate carriers by tier; penalise underperformers contractually | 10% SLA improvement |
 | RFM Win-Back Campaigns | Automated outreach to the At Risk segment (15% of customers) | 12% reactivation rate |
 | Health and Beauty Subscription Pilot | Introduce recurring orders for the top-revenue category | 25% LTV increase for converted subscribers |
-| Regional Warehouse Feasibility Study | Assess whether a Tier 3 fulfilment node reduces average North/Northeast delivery from 17 to 12 days | Unlocks orders currently arriving past the breaking point |
 | Office Furniture and Large Appliances Fix | Mandate reinforced packaging for furniture; establish dedicated carrier contracts for bulky goods | Lift ratings from 3.38-3.45 toward the platform average |
 | Garden Tools Inventory Planning | Pre-position stock before peak seasons; automate markdown triggers post-season | Reduces seasonal revenue volatility |
 
@@ -251,6 +274,7 @@ No new infrastructure required. These actions draw directly from data already pr
 | Seller Quality Score | Composite score (GMV, review rating, SLA compliance) that influences search visibility | Creates a self-improving marketplace where quality is commercially rewarded |
 | Regional Dynamic Pricing Engine | Applies freight subsidies automatically for Tier 3 cohorts in high-intent, high-value categories | Closes the conversion gap in the North and Northeast without blanket discounting |
 | AI-Powered RCA Agent | Full rollout of the AI chatbot to operations, customer service, and marketing teams | Democratises data access; non-technical stakeholders answer their own questions without SQL |
+| Tier 3 Regional Warehouse | Establish a fulfilment node in the North or Northeast to reduce average delivery from 17 to 12 days and bring the freight-to-price ratio below 20%. With ~70% of sellers in the Southeast, carrier optimisation alone cannot structurally close the gap. Full ROI modelling across land, labour, and inventory holding costs versus incremental conversion and churn recovery is required before committing capital, and is recommended as a dedicated future research workstream. | Highest potential impact on both the delivery breaking point and the freight-as-conversion-barrier; requires a rigorous business case before execution |
 
 ---
 
@@ -261,7 +285,7 @@ Referral is the highest-converting, fastest-closing channel on the platform. It 
 | Channel | Current Budget Share | Conversion Rate | Recommended Action |
 |---|---|---|---|
 | Paid Search | ~40% | 10.4% | Reduce by 20% |
-| Referral Programme | ~2% | 14.7% | Reinvest freed budget here |
+| Referral Programme | ~2% | 14.7% | Reinvest free budget here |
 | Organic Search | Zero cost | 12.2% | Increase SEO content investment |
 
 Redirecting 20% of paid spend to referral incentives is projected to improve overall funnel conversion by 8-12%, with close cycles shortening from 28 days to under 20 days.
