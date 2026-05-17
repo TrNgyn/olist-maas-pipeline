@@ -43,7 +43,7 @@ These tiers are not just descriptive. They define different customer expectation
 
 Despite strong top-line growth, Olist faces a retention problem, not a growth problem. The platform successfully attracts customers and converts orders but loses them at the final mile. Every percentage point improvement in on-time delivery translates directly into revenue retained.
 
-8.2% of delivered orders cross their regional breaking point each year. Each one represents a customer who received a poor experience and is unlikely to return, forfeiting R$139 in expected future value. Across the platform, that amounts to $1.1M in annual revenue at risk, recoverable with targeted, data-driven action.
+4.8% of delivered orders suffer material delay (3+ days past estimate), generating an average review score of 1.85 and representing R$856K in order revenue tied to explicitly dissatisfied customers. These bad reviews suppress ratings across 959 sellers, putting an additional R$187K in platform commission at risk through reduced seller visibility. Total three-stream revenue impact: approximately R$1.1M annually, recoverable with targeted, data-driven action.
 
 ### Our Approach
 
@@ -91,9 +91,9 @@ Sellers are also profiled by behavioural archetype, which shapes how the platfor
 
 | Archetype | Description | Engagement Strategy |
 |---|---|---|
-| Shark | Aggressive, high-volume, revenue-driven | Fast onboarding, volume incentives |
-| Wolf | Growth-oriented, relationship-focused | Account management, co-marketing |
-| Cat | Cautious, low-volume, quality-focused | Education resources, gradual scaling support |
+| Market Leader (3% of sellers, 21% of GMV) | Top 10% GMV with rating ≥ 4.2; disproportionate revenue despite small count | Protect relationship; premium placement and co-marketing |
+| Innovator (7% of sellers, 35% of GMV) | Top 10% SKU diversity; widest product catalogue drives outsized GMV share | Scale support; cross-category bundle incentives |
+| Stable Partner (90% of sellers, 44% of GMV) | Core operational base; consistent volume at lower individual GMV | Education resources and gradual scaling support |
 
 ### Side B: Customer Journey (B2C Demand Side)
 
@@ -118,15 +118,21 @@ When a shipment crosses its regional breaking point without intervention, a fulf
 
 ### RFM Customer Segmentation
 
-RFM scores map each customer into an actionable segment. Champions and Loyal Customers represent only 7% of the customer base but generate 28% of total revenue.
+RFM scores map each customer into an actionable segment. Champions and Loyal Customers represent 29% of the customer base but generate 43% of total revenue.
 
-| Segment | Share of Customers | Priority Action |
-|---|---|---|
-| Champions | 2% | Reward and retain |
-| Loyal Customers | 5% | Upsell to premium tiers |
-| Potential Loyalists | 8% | Convert via bundles |
-| At Risk | 15% | Win-back campaigns immediately |
-| Hibernating | 48% | Reactivation campaigns |
+| Segment | Share of Customers | Share of Revenue | Priority Action |
+|---|---|---|---|
+| Champions | 7% | 13% | Reward and retain |
+| Loyal Customers | 22% | 30% | Upsell to premium tiers |
+| Potential Loyalists | 19% | 8% | Convert via bundles |
+| New Customers | 3% | 6% | Onboard and drive second purchase |
+| Promising | 2% | 3% | Incentivise repeat order |
+| Needs Attention | 3% | 1% | Re-engage with targeted offers |
+| About to Sleep | 2% | 1% | Discount offer to prevent churn |
+| At Risk | 16% | 19% | Win-back campaigns immediately |
+| Can't Lose Them | <1% | — | Aggressive personalised win-back |
+| Hibernating | 3% | 1% | Reactivation campaigns |
+| Lost | 23% | 19% | Low-cost reactivation or suppress |
 
 ---
 
@@ -138,7 +144,7 @@ RFM scores map each customer into an actionable segment. Champions and Loyal Cus
 |---|---|
 | Total GMV | R$16.0M |
 | Platform Revenue | R$2.4M |
-| Logistics Revenue | R$320K |
+| Logistics Revenue | R$113K |
 | Total Orders | 99,441 |
 | Delivered Orders | 96,478 (97%) |
 | Active Sellers | 3,095 |
@@ -150,14 +156,14 @@ Delivery delay is the single strongest predictor of customer dissatisfaction on 
 
 | Delivery Status | Average Review Score | Churn Risk |
 |---|---|---|
-| On time or early | 4.21 / 5 | Low |
-| 1-3 days late | 3.85 / 5 | Low |
-| 4-6 days late | 3.12 / 5 | Medium |
-| 7+ days late | 2.45 / 5 | High |
+| On time or early | 4.29 / 5 | Low |
+| 1-3 days late | 3.29 / 5 | Low |
+| 4-6 days late | 2.18 / 5 | Medium |
+| 7+ days late | 1.73 / 5 | High |
 
-Orders delivered 7 or more days past the estimated date see a 42% decline in satisfaction. The damage is not linear: it accelerates sharply at the tier-specific breaking point, which is why intervening before that threshold matters.
+Orders delivered 7 or more days past the estimated date see a 60% decline in satisfaction. The damage is not linear: it accelerates sharply at the tier-specific breaking point, which is why intervening before that threshold matters.
 
-Revenue at risk: 8.2% of delivered orders cross their regional breaking point, representing approximately R$1.1M in annual future revenue forfeited.
+Revenue at risk: 4.8% of delivered orders suffer material delay (3+ days past estimate), generating explicitly dissatisfied customers and suppressing seller ratings across 959 sellers. Combined customer and seller-side impact: approximately R$1.1M in annual revenue forfeited.
 
 ### Product Category Performance
 
@@ -185,11 +191,11 @@ High freight costs relative to order value suppress purchase intent before a cus
 
 | Region | Average Order Value | Average Freight Cost | Freight as % of Order |
 |---|---|---|---|
-| Southeast (Tier 1) | R$165 | R$16 | 9.7% |
-| South / Central-West (Tier 2) | R$158 | R$22 | 13.9% |
-| North / Northeast (Tier 3) | R$132 | R$40 | 30.3% |
+| Southeast (Tier 1) | R$150 | R$20 | 13.2% |
+| South / Central-West (Tier 2) | R$166 | R$25 | 15.0% |
+| North / Northeast (Tier 3) | R$205 | R$37 | 18.0% |
 
-A Tier 3 customer pays roughly 30 cents in freight for every R$1 of product value. At that ratio, freight is not a cost of delivery — it is a conversion barrier. This directly explains the higher cart abandonment rates observed in the North and Northeast, independently of delivery time.
+A Tier 3 customer pays roughly 18 cents in freight for every R$1 of order value — 37% more than a Tier 1 customer. Notably, Tier 3 customers also have higher average order values (R$205 vs R$150), suggesting they order larger or more specialised items that cannot easily be sourced locally. Freight remains a conversion barrier in lower-income Tier 3 regions where price sensitivity is higher, even at lower relative rates.
 
 ### Seller Geographic Concentration (Supply-Side Imbalance)
 
@@ -224,12 +230,11 @@ Advertising effectiveness: Paid ad exposure produced a 43% higher conversion rat
 
 ### The Revenue Leakage Case
 
-| Metric | Value |
+| Revenue Stream | Impact |
 |---|---|
-| Orders crossing the breaking point annually | 7,911 |
-| Lost future revenue per customer | R$139.30 |
-| Total revenue at risk per year | R$1.1M |
-| Recovery per 1,000 salvaged orders | R$33,845 |
+| Materially delayed orders (4.8% of delivered, avg review 1.85) | R$856K order value |
+| Seller commission suppression (959 sellers, 10% GMV at risk) | R$187K |
+| **Total revenue at risk per year** | **R$1.1M** |
 
 ### Recovery Scenarios
 
@@ -259,7 +264,7 @@ No new infrastructure required. These actions draw directly from data already pr
 | Initiative | What It Does | Expected Return |
 |---|---|---|
 | Carrier Performance Scoring | Rate carriers by tier; penalise underperformers contractually | 10% SLA improvement |
-| RFM Win-Back Campaigns | Automated outreach to the At Risk segment (15% of customers) | 12% reactivation rate |
+| RFM Win-Back Campaigns | Automated outreach to the At Risk segment (16% of customers) | 12% reactivation rate |
 | Health and Beauty Subscription Pilot | Introduce recurring orders for the top-revenue category | 25% LTV increase for converted subscribers |
 | Office Furniture and Large Appliances Fix | Mandate reinforced packaging for furniture; establish dedicated carrier contracts for bulky goods | Lift ratings from 3.38-3.45 toward the platform average |
 | Garden Tools Inventory Planning | Pre-position stock before peak seasons; automate markdown triggers post-season | Reduces seasonal revenue volatility |
@@ -272,9 +277,9 @@ No new infrastructure required. These actions draw directly from data already pr
 |---|---|---|
 | Predictive Delay Model | Flags at-risk shipments before dispatch using carrier, route, and historical data | Shifts from reactive customer service to proactive logistics rerouting |
 | Seller Quality Score | Composite score (GMV, review rating, SLA compliance) that influences search visibility | Creates a self-improving marketplace where quality is commercially rewarded |
-| Regional Dynamic Pricing Engine | Applies freight subsidies automatically for Tier 3 cohorts in high-intent, high-value categories | Closes the conversion gap in the North and Northeast without blanket discounting |
+| Regional Dynamic Pricing Engine | Applies freight subsidies automatically for Tier 3 cohorts in high-intent categories | Freight is 18% of order value in Tier 3 vs 13% in Tier 1 — a meaningful but not extreme gap; subsidies should be targeted at price-sensitive SKUs, not blanket discounts |
 | AI-Powered RCA Agent | Full rollout of the AI chatbot to operations, customer service, and marketing teams | Democratises data access; non-technical stakeholders answer their own questions without SQL |
-| Tier 3 Regional Warehouse | Establish a fulfilment node in the North or Northeast to reduce average delivery from 17 to 12 days and bring the freight-to-price ratio below 20%. With ~70% of sellers in the Southeast, carrier optimisation alone cannot structurally close the gap. Full ROI modelling across land, labour, and inventory holding costs versus incremental conversion and churn recovery is required before committing capital, and is recommended as a dedicated future research workstream. | Highest potential impact on both the delivery breaking point and the freight-as-conversion-barrier; requires a rigorous business case before execution |
+| Tier 3 Regional Warehouse | Establish a fulfilment node in the North or Northeast to reduce average delivery from 17 to 12 days. Tier 3 has the highest breaking point rate (5.0% vs 3.8% platform average) and the highest avg order value (R$205), meaning these are high-value customers being lost to avoidable delivery failures, not price-sensitive customers deterred by freight costs. With ~70% of sellers concentrated in the Southeast, carrier optimisation alone cannot close the distance gap. Full ROI modelling across land, labour, and inventory holding costs versus incremental churn recovery is required before committing capital. | Highest potential impact on the Tier 3 breaking point rate; investment case rests on delivery time, not freight cost reduction |
 
 ---
 
