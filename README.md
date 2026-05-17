@@ -6,7 +6,7 @@ TLDR: I built an end-to-end e-commerce analytics platform on AWS and Databricks,
 
 ## 1. Project Overview
 
-### Who
+### The Client
 
 Olist is a Brazilian Marketplace-as-a-Service (MaaS) platform that acts as a digital bridge between small-to-medium local merchants and major national retailers (Amazon, Mercado Livre, Americanas). Rather than each merchant maintaining their own storefront, Olist consolidates them under a single high-reputation account, handling discovery, fulfilment coordination, and payments.
 
@@ -14,7 +14,7 @@ There are two sides to the marketplace:
 - Sellers (B2B): 3,000+ merchants ranging from boutique shops to large distributors, dependent on Olist for reach and order volume.
 - Customers (B2C): ~96,000 unique buyers spread across all 26 Brazilian states, each with different expectations shaped by where they live.
 
-### What
+### Scope of Analysis
 
 This project analyses three years of Olist transaction data (2016 to 2018), a period of 138% year-on-year growth, covering 100,000+ orders, 8,000+ marketing leads, and a 588,000-user advertising experiment, to answer four business-critical questions:
 
@@ -27,7 +27,7 @@ The three datasets are integrated through a snowflake schema with Orders as the 
 
 ![Data Model](docs/ERD.png)
 
-### Where
+### Operating Environment
 
 Brazil's geography creates unequal conditions for e-commerce. The analysis classifies all 26 states into three infrastructure tiers, each with distinct delivery performance and customer behaviour:
 
@@ -39,13 +39,13 @@ Brazil's geography creates unequal conditions for e-commerce. The analysis class
 
 These tiers are not just descriptive. They define different customer expectations, different delay tolerances, and different intervention thresholds. A one-size-fits-all SLA serves no one well.
 
-### Why
+### The Challenge
 
 Despite strong top-line growth, Olist faces a retention problem, not a growth problem. The platform successfully attracts customers and converts orders but loses them at the final mile. Every percentage point improvement in on-time delivery translates directly into revenue retained.
 
 8.2% of delivered orders cross their regional breaking point each year. Each one represents a customer who received a poor experience and is unlikely to return, forfeiting R$139 in expected future value. Across the platform, that amounts to $1.1M in annual revenue at risk, recoverable with targeted, data-driven action.
 
-### How
+### Our Approach
 
 > Built on AWS (S3, Lambda, Terraform) and Databricks, with raw CSV data progressively refined through a Medallion pipeline (Bronze, Silver, Gold) using dbt for transformations and Apache Airflow for orchestration. The Gold layer is exported to S3 as Parquet and consumed by Google Gemini 2.0 Flash AI agents that deliver daily executive summaries and on-demand root cause analysis.
 
