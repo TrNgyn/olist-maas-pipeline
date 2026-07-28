@@ -127,10 +127,10 @@ When a shipment crosses its regional breaking point without intervention, a fulf
 
 ## How it was built
 
-Three Kaggle datasets (100K+ orders, 8K MQLs, 588K-user ad experiment) ingested into AWS S3 and refined through a **Medallion pipeline** (Bronze to Silver to Gold) on Databricks, using dbt for transformations. Gold layer exports to S3 as Parquet, consumed by:
+Three Kaggle datasets (100K+ orders, 8K MQLs, 588K-user ad experiment) ingested into AWS S3 and refined through a Medallion pipeline (Bronze to Silver to Gold) on Databricks, using dbt for transformations. Gold layer exports to S3 as Parquet, consumed by:
 
-- **Power BI dashboards** for KPI monitoring and SLA tracking
-- **Google Gemini 2.0 Flash AI agents** for daily executive summaries and on-demand root cause analysis
+- Power BI dashboards for KPI monitoring and SLA tracking
+- Google Gemini 2.0 Flash AI agents for daily executive summaries and quick root cause analysis directions.
 
 [![Data Model](docs/ERD.png)](docs/ERD.png)
 
