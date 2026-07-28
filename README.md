@@ -1,4 +1,4 @@
-# Olist Marketplace-as-a-Service Analytics
+# Olist Ecommerce Analytics
 
 **TLDR:** End-to-end e-commerce analytics platform on AWS and Databricks, modelling R$16M GMV across 100K+ orders to identify R$1.1M in recoverable annual revenue through delivery delay analysis, RFM customer segmentation, and AI agents that surface operational insights without SQL.
 
